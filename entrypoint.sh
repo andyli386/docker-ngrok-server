@@ -27,6 +27,8 @@ if [ ! -f "build.info" ]; then
   GOOS=windows GOARCH=amd64 make release-client
   GOOS=windows GOARCH=386 make release-client  
   GOOS=darwin GOARCH=amd64 make release-client
+  GOOS=linux GOARCH=amd64 make release-client
+  GOOS=linux GOARCH=arm make release-client
 
   # save build info to file
   echo "$DOMAIN" >> build.info
